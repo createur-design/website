@@ -5,7 +5,7 @@ const app = express();
 const port = 80;
 
 const bodyParser = require("body-parser");
-const ngrok = require("ngrok");
+// const ngrok = require("ngrok");
 
 const ejs = require("ejs");
 // ejs.delimiter = "?";
@@ -60,8 +60,8 @@ app.post("/", (req, res) => {
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
-  (async function () {
-    const url = await ngrok.connect();
-    console.log(url);
-  })();
+  // (async function () {
+  //   const url = await ngrok.connect();
+  //   console.log(url);
+  // })();
 });
