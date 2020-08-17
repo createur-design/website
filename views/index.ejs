@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/app.css" />
+    <script src="./js/cookie.js" defer></script>
+    <script src="./js/app.js"></script>
+  </head>
+  <body>
+    {{% if(isAdmin) { %}}
+    <h1>Coucou {{%= name %}}</h1>
+    <h2>{{%= email %}}</h2>
+    <p>je connais ton mot de passe : {{%= mdp %}}</p>
+    <img class="logo" src="./img/pngkey.com-gamer-png-896110.png" alt="logo" />
+    {{% } else { %}}
+    <form action="#" method="POST">
+      <div>
+        <label for="mdp">Mot de passe</label>
+        <input
+          type="password"
+          name="mdp"
+          id="mdp"
+          name="mdp"
+          placeholder="indiquer votre mot de passe"
+        />
+      </div>
+      <button type="submit">Envoyer</button>
+    </form>
+    {{% } %}}
+  </body>
+</html>
