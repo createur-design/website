@@ -2,7 +2,8 @@ const express = require("express");
 const sassMiddleware = require("node-sass-middleware");
 const path = require("path");
 const app = express();
-const port = 80;
+const port = process.env.PORT || 5000;
+require("dotenv").config();
 
 const bodyParser = require("body-parser");
 // const ngrok = require("ngrok");
